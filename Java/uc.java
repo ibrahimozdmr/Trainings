@@ -152,5 +152,11 @@ public class uc {
         uc1 = bir < iki ? bir : iki;
         System.out.println("uc: " + uc);
         System.out.println("uc1: " + uc1);
+
+        int f = 1;
+        int d = 2;
+        int e = 3;
+        int oncelikler = 2 + --e + ++f + (4 + 5) + d-- + e++ + 4 * 2 + 1;
+        System.out.println("oncelikler: " + oncelikler);
     }
 }
