@@ -1,0 +1,16 @@
+{
+    // Olası öznitelikler hakkında bilgi edinmek için IntelliSense kullanın.
+    // Mevcut özniteliklerin açıklamalarını görüntülemek için üzerine gelin.
+    // Daha fazla bilgi için şu adresi ziyaret edin: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Dart & Flutter",
+            "request": "launch",
+            "type": "dart",
+            "program": "${file}",
+            // buraya ya dosyanın ismini veya konumunu yada ${file} dediğimiz zaman hangi dosya içerisinde isek o çalışacak f5 ile
+            "console": "terminal", // cmd ile çalıştırmak için
+        }
+    ]
+}
