@@ -38,6 +38,11 @@ void main(List<String> args) {
   int atama2 = s4 < s3 ? s4 : s3;
   print("atama sonucu: $atama2");
 
+  var x;
+  var y = 20;
+  var deger = x ?? y; // ilk x e bakar boşsa yani null ise y ye bakar, y de değer varsa onu döndürür yoksa null döndürür.
+  print("val: $deger");
+
   // switch, nested switch(switch içinde switch yapısı)
   int sayi1 = 30;
   String m1 = "bla";
