@@ -19,6 +19,9 @@ void main(List<String> args) {
   double ortalama = 82.4; // ondalıklı sayılar için double
   num boyOlcusu = 43; // tam sayı ve ondalıklı sayılar için
   num boyOlcusu2 = 43.5;
+  print("okulNo: $okulNo\tortalama: $ortalama\tboyOlcusu: $boyOlcusu\tboyOlcusu2: $boyOlcusu2"); 
+  // Burada yeni bir şey öğrendik. "\" -> kaçış karakteri, "\n" -> alt satıra geçiyordu, "\t" -> yazıldığı yere bir tab boşluk bırakıyor
+
   String isim = "Halil İbrahim"; // metinsel ifadeler (çift tırnak veya tek tırnak arasında)
   String soyisim = ' ÖZDEMİR'; // soyisimden önce boşluk bırakılma sebebi altta isim soyisim kısmında
   print(isim + "'in yaşı");

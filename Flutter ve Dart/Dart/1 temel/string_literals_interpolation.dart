@@ -9,6 +9,7 @@ void main(List<String> args) {
   var soyad = 'Kale'; // var türünde de atanabiliyordu
   var kurs = 'Dart\'ı öğreniyorum.'; // ters eğik çizginin anlamı escape karakteri diye geçiyor
   String kursTanimi = "Dart ile Flutter'ı öğreneceğiz"; // tek tırnak yazıları escape karakteri olmadan kullanmak için çift tırnak
+  print("kurs: $kurs\nkursTanımı: $kursTanimi");
 
   print(ad + " " + soyad);
   print("$ad $soyad"); // interpolation ne dersek tek tırnak içinde dışarıdan değişken çağırmak veya tırnak içinde işlem yapmak
