@@ -73,3 +73,13 @@ puts textA + " " + textB
 # Bir dizeyi tekrarlamak (Repeating a String)
 c = "a"
 puts c * 5
+
+# girdi(input) almak
+girilenDeger = gets # girdi gets fonksiyonu ile alınıyor fakat sonuna alt satıra ekleme yapıyor
+puts "girilen değer: #{girilenDeger}"
+print "Lütfen isminizi giriniz: "
+name = gets.chomp
+puts "Hoşgeldin #{name}"
+print "Lütfen yaşınızı giriniz: "
+age = gets.to_i
+puts "Girilen yaş #{age}"
