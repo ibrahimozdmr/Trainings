@@ -172,3 +172,24 @@ for i in 0..10
     print "#{i} "
 end
 print "\n"
+
+# redo -> döngü içerisinde kullanılır. döngünün koşuluna bakmadan döngüyü şart olmadan sonsuz kere tekrarlar.
+sayac = 0
+print "redo : "
+while sayac < 5
+    print "#{sayac} "
+    sayac += 1
+    redo if sayac == 5 # normalde bu satırı yazmasaydık 4 yazdırıp bitecekti fakat sayac, üst satırda 5 olduğundan yazdı.
+    # if koşulunu kaldırıp sadece redo yazarsak sonucun sonsuz defa tekrar ettiğini göreceksin.
+end
+
+# retry ???
+
+# loop do -> bu döngü sonsuz kere tekrarlanıyor eğer içinde çıkış noktası yoksa.
+print "\nloop do: "
+sayac = 0
+loop do
+    print "#{sayac} "
+    sayac += 1
+    break if sayac > 10 # çıkış noktası burada
+end
