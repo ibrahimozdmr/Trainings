@@ -82,3 +82,90 @@ print "dizide gezinerek bastırma: "
 for x in dizi
     print "#{x} "
 end
+
+# hashes (diğer bilinen adı ile dictionary yani sözlükler)
+sayilar = {"bir" => 1, "iki" => 2, "üç" => 3} # key => value (anahtar => değer) ilişkisi. süslü parantezler kullanılıyor
+puts "\nbir sayısı: #{sayilar["bir"]}"
+
+bilgiler = {[34, 85.4, 1988] => "Kemal", [30, 65.1, 1992] => "Eda"} # anahtar kısmı dizi de olabilir yada sağ taraf
+puts "bilgiler[[34, 85.4, 1988]] : #{bilgiler[[34, 85.4, 1988]]}"
+bilgiler = {"Kemal" => [34, 85.4, 1988], "Eda" => [30, 65.1, 1992]} # görüldüğü gibi bu sefer üsttekinin tam tersi
+puts "bilgiler['Kemal'] : #{bilgiler['Kemal']}"
+
+# semboller (symbols)
+isim = :name # burada ":anne" bir semboldür. hafızada bir kez saklanıyor.
+puts "isim : #{isim}"
+
+h = {:name => "Halil İbrahim", :age => 22, :gender => "erkek"}
+h = {name: "Halil İbrahim", age: 22, gender: "erkek"}
+puts "yaş : #{h[:age]}"
+
+# hash üzerinde kullanılan fonksiyonlar
+renkler = {kırmızı: "red", sarı: "yellow", mavi: "blue", siyah: "black"}
+renkler.delete :kırmızı # verilan değer içinde varsa siliyor.
+puts "\nrenkler : #{renkler}"
+puts "hash.key : #{renkler.key "yellow"}" # verilen değer key kısmından olması gerek yoksa nil döndürüyor.
+puts "invert : #{renkler.invert}" # invert key ve value değerlerinin yerini değiştirerek yeni bir hash oluşturuyor.
+puts "anahtarlar(keys) : #{renkler.keys}" # hash'in keylerini yeni bir dizi olarak çıkarıyor.
+puts "değerler(values) : #{renkler.values}" # value değerlerini yeni bir dizi olarak çıkarıyor.
+puts "hash uzunluğu : #{renkler.length}"
+
+# iç içe diziler (nested array)
+nestedArray = [[1, 3, 5, 7, 9], [0, 2, 4, 6, 8], [3, 6, 9]]
+puts "\ndizi içinde dizi: #{nestedArray[1][3]}\ndizinin 0. elemanı: #{nestedArray[0]}"
+
+# nested hashes (iç içe sözlükler diğer adıyla)
+arabalar = {
+    opel: {yıl: 2005, renk: "beyaz"},
+    ferrari: {yıl: 2020, renk: "kırmızı"}
+}
+puts "Ferrari'nin rengi: #{arabalar[:ferrari][:renk]}"
+
+# yineleyiciler (iterators)
+sayilar = [14, 25, 39, 54]
+sayilar.each do |i| # each fonksiyonu burada bir iterator. dizinin her elemanını döner ve i değişkenine atar
+    print "#{i} "
+end
+print "\n"
+
+toplam = 0
+sayilar.each do |x|
+    toplam += x
+end
+puts "sayilar dizisindeki sayıların tolamı: #{toplam}"
+
+# iterator sözlüklerde de kullanılabilir. Hash'lere sözlük diyorum çünkü sözlükte kelime, kelime anlamı gibi çalışıyor.
+cozunurlukler = {HD: 1920, UHD: 3840, UHD: 7680}
+cozunurlukler.each do |kelime, anlami| # do end bloğu. "kelime, anlami" değişkenleri yerine istediğimizi yazabiliriz.
+    print "#{kelime} => #{anlami}\n"
+end
+
+# do end bloğunun daha kısa bir yolu
+print "\n"
+cozunurlukler.each {|key, value| puts "#{key} => #{value}\n"}
+
+# stringlerde de each_char kullanabiliriz
+kelime = "sevmek" # burada karakterleri bir listeye ekleyeceğiz.
+harfDizisi = []
+kelime.each_char {|x| harfDizisi << x}
+puts "#{harfDizisi}" # kelimenin harflerini dönerken eklemiş olduk.
+
+# başka bir iterator(yineleyici) "times"
+toplam = 0
+3.times do
+    toplam += 5 # toplam değişkenine her seferinde 5 ekleyecek. 3.times 3 sefer anlamında
+    print "toplam : #{toplam}\n"
+end
+
+# 6-7 satırda bir metnin karater sayıcı nasıl yapılır öğrenelim :D
+birMetin = "Kelimeler bitmek bilmiyor! Uzun bir METİN :)"
+birMetin.downcase! # downcase fonksiyonu bir string'i hepsini küçük harf yapıyor. Ünlem önceden bahsedildi.
+
+karakterler = {}
+karakterler.default = 0 # default kısmı sözlüğe bir key eklendiğinde karşılığı yoksa varsayılan value olarak atar.
+
+birMetin.each_char {|harf| karakterler[harf] += 1} # burada metni dolarak her karakteri sözlüğe ekledik.
+
+puts "\nmetin: '#{birMetin}'"
+# alt satırda a'dan z'ye metnin karakter sayılarını ekrana baştırması ve kaç tane olduğunu gösteren kod.
+('a'..'z').each {|z| puts "'#{z}' karakterinin metindeki sayısı #{karakterler[z]}" if karakterler[z] != 0}
