@@ -71,16 +71,4 @@ Resmin Github'ın karanlık mod veya aydınlık modda gösterilip gösterilmeyec
 <hr>
 
 ## Dipnotlar:
-[^1]: Emojiler için bir araştırma yap. :D <hr>
-
-## tablo oluşturma:
-| ilk başlık | ikinci başlık |
-| ---------- | ------------- |
-| ***içerik*** | içerik 2 |
-| _içerik 3_ | **içerik 4** | <!-- içerik biçimlendirilebiliyor. -->
-
-Bir tablo oluşturalım <br>
-<!-- sütunu sola veya sağa yaslama işlemi-->
-| isim | soyisim | bölüm | yaş |
-| --- | :---: | ---: | ---: |
-| Halil İbrahim | ÖZDEMİR | Bilgisayar | 20
+[^1]: Emojiler için bir araştırma yap. :D
