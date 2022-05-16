@@ -1,10 +1,10 @@
 # *.md dosyası yazalım*
 
-## Başlık durumu:
+## başlık durumu:
 <!-- başlık eklemek için başına "#" getiriliyor. En fazla 6 tane getirilebilir. -->
-### Bu bir alt başlık <hr>
+### bu bir alt başlık <hr>
 
-## Yazı şekillendirme:
+## yazı şekillendirme:
 **Kalın yazı** - Kalın yazı <br>
 __Kalın yazı 2__ - Kalın yazı 2 <br>
 
@@ -16,7 +16,7 @@ _italik yazı 2_ - italik yazı 2 <br>
 **Kalın ve _italik_** içeren yazı - kalın ve italik içeren yazı <br>
 ***kalın ve italik*** - kalın ve italik <hr>
 
-## Alıntı metin:
+## alıntı metin:
 Bu bir alıntı metin değildir. <br>
 >Bu bir alıntı metindir. <br>
 
@@ -30,7 +30,7 @@ dir
 ```
 <hr>
 
-## Bağlantı oluşturma:
+## bağlantı oluşturma:
 Google gitmek için [tıkla](https://www.google.com.tr). <br>
 Başka bir bağlatıya gitmek için [buraya tıka](links/link.md)
 
@@ -41,7 +41,7 @@ Resmin Github'ın karanlık mod veya aydınlık modda gösterilip gösterilmeyec
 ![Yıldız](links/star.png#gh-light-mode-only) <!-- sadece aydınlık(light) modda gösterilmeye ayarlı -->
 ![Yıldız](links/star.png#gh-dark-mode-only)  <hr> <!-- sadece karanlık(dark) modda gösterilmeye ayarlı -->
 
-## Listeler:
+## listeler:
 -  Sırasız bir liste oluşturmak için
 -  sıradaki madde
 -  bir sonraki madde
@@ -66,9 +66,41 @@ Resmin Github'ın karanlık mod veya aydınlık modda gösterilip gösterilmeyec
 @ibrahimozdmr -> github profilim.
 <hr>
 
-## Emoji de kullanılabilir:
+## emoji de kullanılabilir:
 :+1: -> emojinin anlamı +1 demek.[^1]
 <hr>
 
-## Dipnotlar:
+## dipnotlar:
 [^1]: Emojiler için bir araştırma yap. :D
+<hr>
+
+## tablo oluşturma:
+| ilk başlık | ikinci başlık |
+| ---------- | ------------- |
+| ***içerik*** | içerik 2 |
+| _içerik 3_ | **içerik 4** | <!-- içerik biçimlendirilebiliyor. -->
+
+Bir tablo oluşturalım <br>
+<!-- sütunu sola veya sağa yaslama işlemi-->
+| isim | soyisim | bölüm | yaş |
+| --- | :---: | ---: | ---: |
+| Halil İbrahim | ÖZDEMİR | Bilgisayar | 20 |
+
+<!-- burada dik uzun çizgiyi yapmak için kaçış karakterini kullanmak gerek. kaçış karakteri -> " \ " -->
+| isim | sembol |
+| --- | --- |
+| ters kesme | ` |
+| dik uzun çizgi | \| |
+<hr>
+
+## daraltılmış bölüm oluşturma:
+<details><summary>gizli bölme, görmek istersen tıkla bana</summary>
+<p>
+
+### Her hangi bir şey yazabiliriz.
+``` ruby
+   puts "Merhaba Dünya!"
+```
+
+</p>
+</details>
